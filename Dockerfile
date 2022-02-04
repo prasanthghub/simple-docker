@@ -1,2 +1,2 @@
-FROM ubuntu:20.04
+FROM alpine
 RUN apt update && apt upgrade -y
