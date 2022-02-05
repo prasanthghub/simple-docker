@@ -18,6 +18,13 @@ pipeline {
         }
       }
     }
+    stage('Running image') {
+      steps{
+        script {
+          dockerImage = docker.run imagename
+        }
+      }
+    }
     stage('Deploy Image') {
       steps{
         script {
