@@ -21,7 +21,7 @@ pipeline {
     stage('Running image') {
       steps{
         script {
-          dockerImage = docker.run imagename
+          sh "docker run imagename:latest"
         }
       }
     }
