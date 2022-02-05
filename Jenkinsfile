@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: $repoUrl, branch: 'main'])
+        git([url: ${repoUrl}, branch: 'main'])
       }
     }
     stage('Building image') {
