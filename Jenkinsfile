@@ -1,7 +1,7 @@
 pipeline {
   environment {
     imagename = "adithyak21/jenkins-docker"
-    registryCredential = 'adithyak21'
+    registryCredential = 'Adithya@21'
     dockerImage = ''
   }
   agent any
@@ -21,7 +21,7 @@ pipeline {
     stage('Deploy Image') {
       steps{
         script {
-          docker.withRegistry( '', registryCredential ) {
+          docker.withRegistry( 'adithyak21', registryCredential ) {
             dockerImage.push("$BUILD_NUMBER")
              dockerImage.push('latest')
           }
