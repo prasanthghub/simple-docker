@@ -33,7 +33,7 @@ pipeline {
             dockerImage.push("$BUILD_NUMBER")
              dockerImage.push('latest')
             sh """
-            git tag -a ${BUILD_NUMBER} -m build number ${BUILD_NUMBER}
+            git tag -a ${BUILD_NUMBER} -m "build number ${BUILD_NUMBER}"
             git push ${repoUrl} ${BUILD_NUMBER}
             """
           }
