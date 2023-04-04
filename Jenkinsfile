@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "prasanthmeduri/j-d"
+    imagename = "prasanthmeduri/jenkins-docker"
     registryCredential = 'prasanthmeduri-docckerhub'
     dockerImage = ''
     repoUrl = 'https://github.com/prasanthghub/simple-docker.git'
@@ -15,7 +15,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build prasanthmeduri/j-d
+          dockerImage = docker.build "prasanthmeduri/jenkins-docker"
         }
       }
     }
