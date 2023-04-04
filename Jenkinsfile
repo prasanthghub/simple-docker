@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    imagename = "adithyak21/jenkins-docker"
-    registryCredential = 'adithya-docckerhub'
+    imagename = "prasanth/j-d"
+    registryCredential = 'prasanth-docckerhub'
     dockerImage = ''
     repoUrl = 'https://github.com/prasanthghub/simple-docker.git'
   }
