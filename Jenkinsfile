@@ -3,13 +3,13 @@ pipeline {
     imagename = "adithyak21/jenkins-docker"
     registryCredential = 'adithya-docckerhub'
     dockerImage = ''
-    repoUrl = 'https://github.com/adithyak21/simple-docker.git'
+    repoUrl = 'https://github.com/prasanthghub/simple-docker.git'
   }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/adithyak21/simple-docker.git', branch: 'main'])
+        git([url: 'https://github.com/prasanthghub/simple-docker.git', branch: 'main'])
       }
     }
     stage('Building image') {
